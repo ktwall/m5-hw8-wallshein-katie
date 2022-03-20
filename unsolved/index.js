@@ -18,7 +18,7 @@ console.log(losses);
 
 // target all .box elements and attach a click event listener to each one using a loop
 var box = document.querySelectorAll('.box');
-for (var i = 0; i <box.length; i++) {
+for (var i = 0; i < box.length; i++) {
     box[i].onclick = clickedBox
 }
 
@@ -40,21 +40,21 @@ function clickedBox(event) {
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
-    if(numberBoxClicked === randomNumberWinningBox) {
-        console.log("Winner!");
-        message.textContent = "Winner";
-        winScore += 1;
-        wins.textContent = "Wins:" + winScore;
-        console.log("Wins:", winScore);
+if(numberBoxClicked === randomNumberWinningBox) {
+    console.log("Winner!");
+    message.textContent = "Winner!";
+    winScore += 1;
+    wins.textContent = "Win:" + winScore;
+    console.log("Wins:", winScore);
 
 // if the numbers don't match, change the div#message element's text to a random losing message from the array above
 // if the numbers don't match, increment losses and display the loss count in div#losses
 
     } else {
-        console.log(youLostMessage);
-    message.textContent = youLostMessage[Math.floor(Math.random() *3)];
-    loseScore +=1;
-    losses.textContent = "Losses:" + loseScore;
-    console.log("Losses:", loseScore);
+        console.log(losingMessage);
+    message.textContent = losingMessage[Math.floor(Math.random() *3)];
+    loseScore += 1;
+    losses.textContent = "Loss:" + loseScore;
+    console.log("Losses;", loseScore);
     }
 }
