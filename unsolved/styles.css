@@ -163,7 +163,7 @@ p {
 }
 
 .box {
-  padding: 3%;
+  padding: 15%;
   border: .4em solid #6003C3;
   border-radius: .5em;
   box-shadow: .25em .25em 1em gray;
@@ -188,20 +188,43 @@ p {
   background-color: #A5FF01;
 }
 
+.score {
+  color: #6003C3;
+  font-size: 2em;
+  text-align: center; 
+  padding: 2em;
+}
+
 /* Mediq Queries */
 
 @media screen and (min-width: 576px) {
   .boxes {
     display: flex;
-    width: 100%;
+    width: 90%;
+    padding: 3%;
   }
   .box {
     flex: 1;
-    margin: 2em 4em;
+    margin: 2em 1.4em;
   }
   h1 {
     width: 10%;
     margin: 0 auto; 
   }
 } 
-  
+
+@media screen and (min-width: 992px) {
+  .boxes {
+    font-size: 3em;
+  }
+  .box {
+    padding: 6%;
+    margin: 2em 1.75em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box {
+    margin: 2em 2em;
+  }
+}
